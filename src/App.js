@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import { Home } from './Components/Home.js';
 import { MountainInfo } from './Components/MountainInfo';
 import { NationalParks } from './Components/NationalParks';
@@ -6,39 +6,34 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
-}
-  from "react-router-dom";
+  Link,
+  Outlet,
+} from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div className="App">
-
-        <nav>
+      <div className='App'>
+        <nav className='nav-container'>
           <ul>
-            <li> <Link to="/">Home </Link></li>
-            <li> <Link to="/">National Parks </Link></li>
-            <li> <Link to="/">Mountain Information </Link></li>
-
+            <li>
+              <Link to='/home'>Home </Link>
+            </li>
+            <li>
+              <Link to='/nationalparks'>National Parks </Link>
+            </li>
+            <li>
+              <Link to='/mountianinfo'>Mountain Information </Link>
+            </li>
           </ul>
         </nav>
 
-
-        <header className="App-header">
-
-
-        </header>
         <Routes>
-          <Route path="/Home">
-            <Home />
-          </Route>
-          <Route path="/MountainInfo">
-            <MountainInfo />
-          </Route>
-          <Route path="National Parks">
-            <NationalParks />
-          </Route>
+          <Route path='/home' element={<Home />} />
+          <Route path='/nationalparks' element={<NationalParks />} />
+          <Route path='/mountianinfo' element={<MountainInfo />} />
         </Routes>
+
+        <Outlet />
       </div>
     </Router>
   );
