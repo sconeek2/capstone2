@@ -5,10 +5,10 @@ import { useState } from "react";
 
 export const NationalParks = () => {
 
-  //this useState is to track
+  //this useState is to track query value 
   const [parkQueryValue, setParkQueryValue] = useState('');
 
-  //this useState is to track
+  //this useState is to track store the results of the array filtering 
   const [parkQueryResults, setParkQueryResults] = useState(parktype);
 
   //initializing the value for parkQueryValue
