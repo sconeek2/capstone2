@@ -4,7 +4,7 @@ import { Card } from './Card';
 import { locations } from '../Data/data';
 export const Home = () => {
   return (
-    <div className='App'>
+    <div className='home-container'>
       <Hero />
       <div className='about-us-container'>
         <h3>About Us</h3>
