@@ -1,0 +1,21 @@
+.button-container button {
+  background-color: white;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 7.5px;
+}
+
+.hero-container {
+  background-image: url('../../images/mountains/Banner.jpg');
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-container h1 {
+  color: white;
+  font-size: 80px;
+  -webkit-text-stroke: 0.5px black;
+}

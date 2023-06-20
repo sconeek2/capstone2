@@ -1,14 +1,18 @@
-
+import './Styles/Hero.css';
+import { useNavigate } from 'react-router-dom';
 
 export const Hero = () => {
-  return (
-    <div className="hero-container">
-      <h1>Discover the Outdoors! </h1>
-      <div className="button-container">
-        <button>Explore National Parks</button>
-        <button>Search Mountains</button>
-      </div>
+  const navigate = useNavigate();
 
+  return (
+    <div className='hero-container'>
+      <p>Discover the Outdoors! </p>
+      <div className='button-container'>
+        <button onClick={() => navigate('/nationalparks')}>
+          Explore National Parks
+        </button>
+        <button onClick={() => navigate('/mountains')}>Search Mountains</button>
+      </div>
     </div>
   );
-}
+};

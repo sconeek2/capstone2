@@ -27,13 +27,11 @@ function App() {
             </li>
           </ul>
         </nav>
-
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/nationalparks' element={<NationalParks />} />
           <Route path='/mountianinfo' element={<MountainInfo />} />
         </Routes>
-
         <Outlet />
       </div>
     </Router>
