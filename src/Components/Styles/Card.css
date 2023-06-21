@@ -1,4 +1,24 @@
-.card-style {
-  margin-left: 10px;
-  margin-right: 10px;
+.park-img {
+  height: 400px;
+  background-image: url("../../../public/Cannon-StoryImg_2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 50px;
+  border-radius: 15px;
 }
+
+.card-style {
+  margin: 100px 50px 50px 10px;
+  width: 500px;
+  background-color: beige;
+
+}
+
+.card-body{
+  margin-top: 15px;
+}
+
+.park-name{
+  
+}
+
