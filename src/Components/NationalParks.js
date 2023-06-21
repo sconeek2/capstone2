@@ -1,7 +1,8 @@
 import "./Styles/NationalParks.css";
-import { parktype } from "../Data/data";
+import { parktype,locations } from "../Data/data";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useState } from "react";
+import { Radio } from "react-bootstrap";
 
 export const NationalParks = () => {
 
@@ -10,20 +11,26 @@ export const NationalParks = () => {
 
   //this useState is to track store the results of the array filtering 
   const [parkQueryResults, setParkQueryResults] = useState(parktype);
-
+  const [filterselect, setfilterselect] = useState(false);
+  
   //initializing the value for parkQueryValue
   const filterParkType = (event) => {
     console.log(event);
-    setParkQueryValue (event.target.text);
-    let tempParks = parktype.filter (p) => {
-      p.
-    };
+  
 
   }
 
-  return (
-    <div className="App">
-      National Parks
+return (
+  <div className="App">
+    National Parks
+   <div>
+    <input type="radio" name= "filterbtn" checked={false ===filterselect} onChange={event=>{setfilterselect(false)}} />
+    <label>Locations</label>
+    </div>
+    <div>
+    <input type="radio" name="filterbtn" checked={true===filterselect} onChange={event=>{setfilterselect(true)}} />
+    <label>Park Type</label>
+    </div>
       <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           Park Type
@@ -35,7 +42,18 @@ export const NationalParks = () => {
           })}
         </Dropdown.Menu>
       </Dropdown>
-      
-    </div>
-  );
+
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Locations
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          {locations.map((location) => {
+            return <Dropdown.Item onClick={filterParkType} href="#/action-1">{location}</Dropdown.Item>;
+          })}
+        </Dropdown.Menu>
+      </Dropdown>
+  </div>
+);
 };
