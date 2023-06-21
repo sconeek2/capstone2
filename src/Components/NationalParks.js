@@ -10,7 +10,7 @@ export const NationalParks = () => {
   const [parkQueryValue, setParkQueryValue] = useState('');
 
   //this useState is to track store the results of the array filtering 
-  const [parkQueryResults, setParkQueryResults] = useState(parktype);
+  
   const [filterselect, setfilterselect] = useState(false);
 
   //initializing the value for parkQueryValue
@@ -19,15 +19,14 @@ export const NationalParks = () => {
 
 
   }
+  let parkQueryResults = nationalparks.filter(nationalpark => {
+
+    return nationalpark.State === parkQueryValue
+  })
   const filterLocations = (event) => {
     console.log(event);
-    setParkQueryValue(event.target.text)
-    let tempresults = nationalparks.filter(nationalpark => {
-
-      return nationalpark.State === parkQueryValue
-    })
-    console.log(tempresults)
-    setParkQueryResults(tempresults)
+    setParkQueryValue(event.target.dataset.id)
+   
   }
   return (
     <div className="App">
@@ -61,21 +60,24 @@ export const NationalParks = () => {
 
           <Dropdown.Menu>
             {locations.map((location) => {
-              return <Dropdown.Item onClick={filterLocations} href="#/action-1">{location}</Dropdown.Item>;
+              return <Dropdown.Item onClick={filterLocations} data-id={location} >{location}</Dropdown.Item>;
             })}
           </Dropdown.Menu>
         </Dropdown>
       }
 
 
-<div>
-{parkQueryResults.map((parkQueryResult) => {
-              return <div>{
-                parkQueryResult
-                }</div>;
-            })}
+      <div>
+        {parkQueryResults.map((parkQueryResult) => {
+          console.log(parkQueryResult)
 
-</div>
+          return <div>{
+            parkQueryResult.LocationName
+
+          }</div>;
+        })}
+
+      </div>
     </div>
   );
 };

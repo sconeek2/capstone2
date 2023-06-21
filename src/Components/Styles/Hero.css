@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-.hero-container h1 {
+.tagline{
   color: white;
   font-size: 80px;
   -webkit-text-stroke: 0.5px black;
