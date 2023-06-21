@@ -1,0 +1,14 @@
+.mountain-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.mountain-container {
+  margin-top: 150px;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+.mountain-info-container {
+}
