@@ -1,6 +1,6 @@
 import "./Styles/Card2.css";
 
-export const Card2 = ({ img }) => {
+export const Card2 = ({ img, name }) => {
   return (
     <div className="card-style">
       <div
@@ -9,7 +9,7 @@ export const Card2 = ({ img }) => {
       ></div>
 
       <div className="card-body">
-        <h5 className="park-name"> Park Name Here</h5>
+        <h5 className="park-name"> {name}</h5>
         <p className="park-address">Park Address Here</p>
       </div>
     </div>
