@@ -1,9 +1,10 @@
-import './Styles/MountainInfo.css';
-import { mountains } from '../Data/data';
-import { Dropdown } from 'react-bootstrap';
-import { useState } from 'react';
-import { Mountain } from './Mountain';
-import { MountainsHero } from './MountainsHero';
+import "./Styles/MountainInfo.css";
+import { mountains } from "../Data/data";
+import { Dropdown } from "react-bootstrap";
+import { useState } from "react";
+import { Mountain } from "./Mountain";
+import { MountainsHero } from "./MountainsHero";
+import { Footer } from "./Footer";
 
 export const MountainInfo = () => {
   const [mountainsArray, setMountainsArray] = useState(mountains);
@@ -20,11 +21,11 @@ export const MountainInfo = () => {
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       <MountainsHero />
       <div>
-        <Dropdown className='Mnt-dropdownbtn'>
-          <Dropdown.Toggle variant='success' id='dropdown-basic'>
+        <Dropdown className="Mnt-dropdownbtn">
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
             Mountains
           </Dropdown.Toggle>
 
@@ -42,11 +43,11 @@ export const MountainInfo = () => {
           </Dropdown.Menu>
         </Dropdown>
       </div>
-      <div className='mountain-container'>
+      <div className="mountain-container">
         {mountain.map((m) => (
-          <div className='mountain-info-container'>
+          <div className="mountain-info-container">
             <div
-              className='mountain-img'
+              className="mountain-img"
               style={{ backgroundImage: `url(${m.img})` }}
             >
               &nbsp;
@@ -61,6 +62,7 @@ export const MountainInfo = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

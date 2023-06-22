@@ -1,0 +1,8 @@
+.card2-park-img {
+    height: 400px;
+    background-image: url("../../../public/Cannon-StoryImg_2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px;
+    border-radius: 15px;
+}

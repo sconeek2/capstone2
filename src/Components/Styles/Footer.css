@@ -1,6 +1,6 @@
 .footer-container{
-    display: flex;
+  display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  height: 200px;
+  justify-content: center;
 }
+

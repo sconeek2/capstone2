@@ -1,15 +1,15 @@
-import './Styles/Home.css';
-import { Hero } from './Hero';
-import { Card2 } from './Card2';
-import { Footer } from './Footer';
-import { locations } from '../Data/data';
+import "./Styles/Home.css";
+import { Hero } from "./Hero";
+import { Card2 } from "./Card2";
+import { Footer } from "./Footer";
+import { locations } from "../Data/data";
 export const Home = () => {
   return (
-    <div className='home-container'>
+    <div className="home-container">
       <Hero />
-      <div className='about-us-container'>
-        <h3>About Us</h3>
-        <p>
+      <div className="about-us-container">
+        <p id="home-about-us">About Us</p>
+        <p align="left">
           We are a community of hiker enthusiasts who are passionate about
           exploring the great outdoors and experiencing the beauty of nature
           firsthand. We believe that hiking is not just a physical activity, but
@@ -20,9 +20,8 @@ export const Home = () => {
         </p>
       </div>
 
-      <div>
-        <h1> Explore Top Rated Parks</h1>
-      <Footer/>
+      <div classname="home-footer-container">
+        <Footer />
       </div>
     </div>
   );

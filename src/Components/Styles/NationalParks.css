@@ -11,3 +11,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.dropdown{
+  margin-bottom: 10px;
+}
