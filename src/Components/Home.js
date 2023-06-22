@@ -1,6 +1,6 @@
 import './Styles/Home.css';
 import { Hero } from './Hero';
-import { Card } from './Card';
+import { Card2 } from './Card2';
 import { locations } from '../Data/data';
 export const Home = () => {
   return (
@@ -22,10 +22,10 @@ export const Home = () => {
       <div>
         <h1> Explore Top Rated Parks</h1>
         <div className='card-container'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card2 />
+          <Card2 />
+          <Card2 />
+          <Card2 />
         </div>
       </div>
     </div>
