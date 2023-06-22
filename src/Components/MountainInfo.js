@@ -23,7 +23,7 @@ export const MountainInfo = () => {
     <div className='App'>
       <MountainsHero />
       <div>
-        <Dropdown>
+        <Dropdown className='Mnt-dropdownbtn'>
           <Dropdown.Toggle variant='success' id='dropdown-basic'>
             Mountains
           </Dropdown.Toggle>
