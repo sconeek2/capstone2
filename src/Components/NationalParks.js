@@ -98,23 +98,13 @@ export const NationalParks = () => {
       <div className='parks-card-container'>
         <div className='park-query-value'>{parkQueryValue}</div>
         <div className='park-query-data-container'>
-          {filterselect ? (
-            <div>
-              {parkQueryResults.map((parkQueryResult) => {
-                console.log(parkQueryResult);
-
-                return <Card park={parkQueryResult} />;
-              })}
-            </div>
-          ) : (
-            <div>
-              {locationQueryResults.map((locationQueryResult) => {
-                console.log(locationQueryResult);
-
-                return <Card park={locationQueryResult} />;
-              })}
-            </div>
-          )}
+          {filterselect
+            ? parkQueryResults.map((parkQueryResult) => (
+                <Card park={parkQueryResult} />
+              ))
+            : locationQueryResults.map((locationQueryResult) => (
+                <Card park={locationQueryResult} />
+              ))}
         </div>
       </div>
     </div>

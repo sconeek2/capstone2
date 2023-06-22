@@ -1,5 +1,4 @@
 import './Styles/Card2.css';
-import Mountain from '../images/mountains/Adams-StoryImage_2.jpg';
 
 export const Card2 = () => {
   return (

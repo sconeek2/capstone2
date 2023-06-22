@@ -1,7 +1,8 @@
 .mountain-img {
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
+  background-size: contain;
+  height: 400px;
+  width: 400px;
 }
 
 .mountain-container {

@@ -47,9 +47,10 @@ export const MountainInfo = () => {
           <div className='mountain-info-container'>
             <div
               className='mountain-img'
-              style={{ 'background-img': '${m.img}' }}
-            ></div>
-            <p> {m.img}</p>
+              style={{ backgroundImage: `url(${m.img})` }}
+            >
+              &nbsp;
+            </div>
             <h1> {m.name}</h1>
             <p>{m.elevation} ft</p>
             <p>
